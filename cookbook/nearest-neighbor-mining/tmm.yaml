@@ -1,0 +1,6 @@
+source_parquet: /data/B.parquet
+target_parquet: /data/S.parquet
+output_parquet: /data/out/mined.parquet
+topn: 5
+knn_metric: cosine
+filter_by_label: "false"

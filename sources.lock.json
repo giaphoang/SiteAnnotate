@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "paidf-curation-and-retrieval": {
+      "url": "https://github.com/NVIDIA/paidf-curation-and-retrieval.git",
+      "ref": "main",
+      "commit": "19e3a1e95db7ce2f88c249044601f8d7811abcf5",
+      "role": "PAIDF curation, retrieval, cookbooks, and Make interface"
+    },
+    "cosmos-reason1": {
+      "url": "https://github.com/nvidia-cosmos/cosmos-reason1.git",
+      "ref": "main",
+      "commit": "b84a3fae3284c375bb0cefab7b53aeb1d5059ab6",
+      "model_id": "nvidia/Cosmos-Reason1-7B",
+      "role": "camera captioning and structured temporal scene descriptions"
+    },
+    "SUSTechPOINTS": {
+      "url": "https://github.com/naurril/SUSTechPOINTS.git",
+      "ref": "dev-auto-annotate",
+      "commit": "50fa18871a6d46507ff9057175669235885f79f9",
+      "role": "camera-LiDAR 3D box review"
+    },
+    "RELLIS-3D": {
+      "url": "https://github.com/unmannedlab/RELLIS-3D.git",
+      "ref": "main",
+      "commit": "c17a118fcaed1559f03cc32cc3a91dedc557f8b8",
+      "role": "dataset layout, calibration, labels, ROS topics, and SalsaNext benchmark"
+    }
+  },
+  "policy": "Run scripts/bootstrap_sources.sh to resolve and record exact commits before a release. Do not commit data, model weights, or runtime secrets."
+}

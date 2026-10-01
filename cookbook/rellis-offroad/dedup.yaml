@@ -1,0 +1,6 @@
+pipeline: "dedup"
+input_embeddings_path: "/data/output/split"
+output_path: "/data/output/dedup"
+model_weights_path: "/config/models"
+n_clusters: 8
+eps_to_extract: 0.01

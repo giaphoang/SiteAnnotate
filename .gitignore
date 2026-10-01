@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+.cache/
+.env
+local.env
+
+# Runtime data, model weights, and generated artifacts
+data/
+runs/
+models/
+vendor/*
+!vendor/.gitkeep
+
+# Local editor/runtime files
+.DS_Store
+*.log

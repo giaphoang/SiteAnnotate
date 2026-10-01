@@ -1,0 +1,29 @@
+# Extended PAIDF cookbook. The caption role is delegated to the configured
+# OpenAI-compatible Cosmos Reason endpoint via PAIDF environment variables.
+
+pipeline: "split"
+input_video_path: "/data/videos"
+output_clip_path: "/data/output/split"
+model_weights_path: "/config/models"
+splitting_algorithm: "transnetv2"
+captioning_algorithm: "openai"
+openai_model_name: "auto"
+captioning_prompt_text: >-
+  Describe the notable terrain, traversability conditions, objects, hazards,
+  and temporal events in this RELLIS-3D off-road sequence. Return valid JSON
+  with scene and events fields.
+captioning_max_output_tokens: 2048
+generate_captions: true
+enhance_captions: false
+video_classifier: false
+motion_filter: "score-only"
+vlm_filter: "disable"
+artificial_text_filter: false
+sam3: false
+event_captioning: false
+super_resolution: false
+generate_embeddings: true
+embedding_algorithm: "cosmos-embed1-224p"
+upload_clips: true
+write_all_caption_json: true
+perf_profile: false

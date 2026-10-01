@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "siteannotate"
+version = "0.1.0"
+description = "RELLIS-3D camera-LiDAR curation, review, and publication integration"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+runtime = [
+  "Pillow>=10.0",
+  "PyYAML>=6.0"
+]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.6"
+]
+
+[project.scripts]
+siteannotate = "siteannotate.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+siteannotate = ["static/*.html"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

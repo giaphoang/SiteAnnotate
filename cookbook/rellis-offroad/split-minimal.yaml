@@ -1,0 +1,27 @@
+# SiteAnnotate's PAIDF entry point for the first camera-only vertical slice.
+# PAIDF mounts DATA_DIR at /data inside its Curator container.
+
+pipeline: "split"
+input_video_path: "/data/videos"
+output_clip_path: "/data/output/split-minimal"
+model_weights_path: "/config/models"
+splitting_algorithm: "fixed-stride"
+fixed_stride_split_duration: 10
+fixed_stride_min_clip_length_s: 2.0
+limit: 1
+generate_captions: false
+enhance_captions: false
+video_classifier: false
+motion_filter: "disable"
+aesthetic_threshold: null
+vlm_filter: "disable"
+artificial_text_filter: false
+sam3: false
+event_captioning: false
+super_resolution: false
+generate_embeddings: true
+embedding_algorithm: "cosmos-embed1-224p"
+embedding_batch_size: 4
+upload_clips: true
+write_all_caption_json: false
+perf_profile: false

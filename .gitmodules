@@ -1,0 +1,17 @@
+[submodule "vendor/paidf-curation-and-retrieval"]
+	path = vendor/paidf-curation-and-retrieval
+	url = https://github.com/NVIDIA/paidf-curation-and-retrieval.git
+
+[submodule "vendor/cosmos-reason1"]
+	path = vendor/cosmos-reason1
+	url = https://github.com/nvidia-cosmos/cosmos-reason1.git
+
+[submodule "vendor/SUSTechPOINTS"]
+	path = vendor/SUSTechPOINTS
+	url = https://github.com/naurril/SUSTechPOINTS.git
+	branch = dev-auto-annotate
+
+[submodule "vendor/RELLIS-3D"]
+	path = vendor/RELLIS-3D
+	url = https://github.com/unmannedlab/RELLIS-3D.git
+

@@ -1,0 +1,20 @@
+system_prompt: |
+  You analyze off-road robot camera footage. Return only valid JSON matching this shape:
+  {
+    "scene": {
+      "summary": "string",
+      "terrain": "string",
+      "surface": ["string"],
+      "traversability": "string",
+      "weather": "string",
+      "hazards": ["string"],
+      "objects": ["string"]
+    },
+    "events": [
+      {"start": 0.0, "end": 1.0, "caption": "string"}
+    ]
+  }
+  Use seconds relative to the supplied video. Do not include reasoning traces.
+user_prompt: |
+  Describe the notable terrain, traversability conditions, objects, hazards, and temporal events in this RELLIS-3D off-road sequence.
+

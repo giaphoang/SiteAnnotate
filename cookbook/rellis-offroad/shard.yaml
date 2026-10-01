@@ -1,0 +1,11 @@
+pipeline: "shard"
+input_clip_path: "/data/output/split"
+output_dataset_path: "/data/output/shard"
+model_weights_path: "/config/models"
+captioning_algorithm: "openai"
+input_semantic_dedup_path: "/data/output/dedup"
+semantic_dedup_epsilon: 0.01
+target_tar_size_mb: 500
+max_tars_per_part: 100
+min_clips_per_tar: 1
+drop_small_shards: false
