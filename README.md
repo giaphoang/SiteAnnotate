@@ -1,4 +1,3 @@
-<h1 align="center">SiteAnnotate</h1>
 **SiteAnnotate** integrates annotation automation solutions to create training data for robotics, autonomy, computer vision, and Vision-Language-Action (VLA) systems.
 
 It reduces the manual work needed to turn off-road camera–LiDAR recordings into consistent, reviewed training datasets.
