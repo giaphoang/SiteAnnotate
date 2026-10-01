@@ -1,7 +1,12 @@
-# SiteAnnotate
+**SiteAnnotate** integrates annotation automation solutions to create training data for robotics, autonomy, computer vision, and Vision-Language-Action (VLA) systems.
 
-SiteAnnotate is a file-backed RELLIS-3D pipeline for synchronized camera/LiDAR
-curation, captions, semantic labels, human review, and dataset publication.
+It reduces the manual work needed to turn off-road camera–LiDAR recordings into consistent, reviewed training datasets.
+
+| Item | Description |
+| --- | --- |
+| Input | RELLIS-3D camera sequences, LiDAR point clouds, timestamps, sensor calibration, and reference semantic labels reserved for evaluation |
+| Processing | Camera–LiDAR alignment → Cosmos Curator filtering/deduplication → Cosmos Reason captioning → annotation review → quality validation |
+| Output | Curated sensor samples, reviewed scene captions, approved annotations, versioned dataset manifests, and quality reports |
 
 ## Start here
 
@@ -25,6 +30,9 @@ make ingest RELLIS_ROOT=data/RELLIS-3D SEQUENCE=00000 RUN=runs/rellis-00000
 make predict-semantics RUN=runs/rellis-00000
 make review RUN=runs/rellis-00000
 ```
+
+Without weights, `predict-semantics` stages reference labels for evaluation;
+use reviewed model predictions for training annotations.
 
 Open the 3D box reviewer and semantic-label editor in separate terminals:
 
